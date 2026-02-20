@@ -18,21 +18,21 @@ type PortfolioItem = {
 const items: PortfolioItem[] = [
   {
     name: "MSC (Mustanir ShariaTech Consulting)",
-    desc: "Konsultasi teknologi yang rapi, terukur, dan sesuai governance.",
+    desc: "Kami membantu Anda menata bahan, pemasok, proses produksi, serta klaim pada kemasan & promosi—agar bisnis berkembang secara berkelanjutan, dengan keuntungan yang berkah dan berkelanjutan, tanpa melanggar prinsip syariat.",
     tags: ["Consulting & Tech"],
     cta: "visit",
     url: "https://mustanir-sc.lovable.app",
   },
   {
     name: "Gandiwa Partner",
-    desc: "Platform kolaborasi partner digital.",
+    desc: "Stokis atau Distributor Produk Madu Gandiwa Power.",
     tags: ["Consumer Brand"],
     cta: "visit",
     url: "https://gandiwa-partner.lovable.app",
   },
   {
     name: "Rempah Power",
-    desc: "Brand rempah modern dengan kekuatan lokal.",
+    desc: "Ritual harian berbasis rempah & madu untuk tenang di malam hari, jernih di pagi hari, dan kuat sepanjang hari.",
     tags: ["Consumer Brand"],
     cta: "visit",
     url: "https://project-rempah-power.lovable.app",
