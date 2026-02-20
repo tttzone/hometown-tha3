@@ -19,20 +19,14 @@ const items: PortfolioItem[] = [
   {
     name: "MSC (Mustanir ShariaTech Consulting)",
     desc: "Konsultasi teknologi yang rapi, terukur, dan sesuai governance.",
-    tags: ["Consulting"],
-    cta: "detail",
-    modal: {
-      bullets: [
-        "Konsultasi end-to-end untuk transformasi digital berbasis syariah.",
-        "Untuk perusahaan dan lembaga yang butuh governance & delivery terstruktur.",
-        "Kamu mendapat roadmap, delivery framework, dan hands-on coaching.",
-      ],
-    },
+    tags: ["Consulting & Tech"],
+    cta: "visit",
+    url: "https://mustanir-sc.lovable.app",
   },
   {
     name: "Gandiwa Partner",
     desc: "Platform kolaborasi partner digital.",
-    tags: ["Tech"],
+    tags: ["Consumer Brand"],
     cta: "visit",
     url: "https://gandiwa-partner.lovable.app",
   },
@@ -64,7 +58,7 @@ const items: PortfolioItem[] = [
   },
 ];
 
-const filters = ["All", "Tech", "Consulting", "Consumer Brand", "AI Services"];
+const filters = ["All", "Consulting & Tech", "Consumer Brand", "AI Services"];
 
 const PortfolioSection = () => {
   const [filter, setFilter] = useState("All");
