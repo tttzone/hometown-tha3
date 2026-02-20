@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6 text-xs text-muted-foreground">
         <div className="space-y-2 text-center md:text-left">
           <p>© {new Date().getFullYear()} Hometown Tha-Tha-Tha. All rights reserved.</p>
-          <p>Domain/brand 'ASA' refers to Akraf Surya Alghifari (Perusahaan Perseorangan).</p>
+          <p>Akraf Surya Alghifari (ASA).</p>
         </div>
         <div className="space-y-2 text-center md:text-right">
           <p>All product names, trademarks, and logos displayed on this site are the property of their respective owners.</p>
