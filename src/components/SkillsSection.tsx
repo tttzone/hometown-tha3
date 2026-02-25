@@ -53,18 +53,19 @@ const skills = [
 ];
 
 const SkillsSection = () => (
-  <section id="skills" className="py-24 relative">
+  <section id="skills" className="py-28 relative section-divider">
     <div className="container mx-auto px-4">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center text-gradient-primary"
+        className="section-heading"
       >
         Skills & Capabilities
       </motion.h2>
+      <p className="section-subtitle">Kombinasi unik engineering, product, dan agile delivery.</p>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {skills.map((skill, i) => (
           <motion.div
             key={i}
@@ -72,22 +73,18 @@ const SkillsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
-            className="glass rounded-xl p-5 hover:glow-primary transition-all duration-300 group"
+            className="card-template group"
           >
-            <skill.icon
-              size={28}
-              className="text-primary mb-3 group-hover:scale-110 transition-transform"
-            />
-            <h3 className="font-heading text-sm font-bold text-foreground mb-1">
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ background: "hsl(174 72% 50% / 0.1)" }}>
+              <skill.icon size={22} className="text-primary group-hover:scale-110 transition-transform" />
+            </div>
+            <h3 className="font-heading text-sm font-bold text-foreground mb-1.5">
               {skill.title}
             </h3>
-            <p className="text-xs text-muted-foreground mb-3">{skill.value}</p>
-            <div className="flex flex-wrap gap-1">
+            <p className="text-xs text-muted-foreground mb-4 leading-relaxed">{skill.value}</p>
+            <div className="flex flex-wrap gap-1.5">
               {skill.chips.map((chip) => (
-                <span
-                  key={chip}
-                  className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-secondary text-secondary-foreground"
-                >
+                <span key={chip} className="chip !text-[10px] !px-2 !py-0.5">
                   {chip}
                 </span>
               ))}
