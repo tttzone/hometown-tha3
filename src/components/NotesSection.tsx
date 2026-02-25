@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import bgImg from "@/assets/background_ciremai.jpg";
 
 const NotesSection = () => (
-  <section id="notes" className="py-24 relative overflow-hidden">
+  <section id="notes" className="py-28 relative overflow-hidden section-divider">
     {/* Subtle bg */}
     <div className="absolute inset-0 opacity-[0.06]">
       <img src={bgImg} alt="" className="w-full h-full object-cover" loading="lazy" />
@@ -15,13 +15,15 @@ const NotesSection = () => (
         transition={{ duration: 0.8 }}
         className="max-w-2xl mx-auto text-center"
       >
-        <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8 text-gradient-warm">Catatan</h2>
-        <p className="text-lg md:text-xl text-foreground italic leading-relaxed font-heading">
-          "Selamat datang di beranda kecilku, tempat ide mengalir setenang air dari puncak Ciremai."
-        </p>
-        <p className="text-sm text-muted-foreground mt-6">
-          — Surya Ban-jang (Totok Suryanto)
-        </p>
+        <h2 className="font-heading text-2xl md:text-3xl font-bold mb-10 text-gradient-warm">Catatan</h2>
+        <div className="card-template !p-8 md:!p-10">
+          <p className="text-lg md:text-xl text-foreground italic leading-relaxed font-heading">
+            "Selamat datang di beranda kecilku, tempat ide mengalir setenang air dari puncak Ciremai."
+          </p>
+          <p className="text-sm text-muted-foreground mt-6">
+            — Surya Ban-jang (Totok Suryanto)
+          </p>
+        </div>
       </motion.div>
     </div>
   </section>

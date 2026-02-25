@@ -20,18 +20,19 @@ const achievements = [
 ];
 
 const AchievementsSection = () => (
-  <section id="achievements" className="py-24 relative">
+  <section id="achievements" className="py-28 relative section-divider">
     <div className="container mx-auto px-4">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center text-gradient-primary"
+        className="section-heading"
       >
         Achievements
       </motion.h2>
+      <p className="section-subtitle">Penghargaan dan pencapaian yang membanggakan.</p>
 
-      <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
         {achievements.map((a, i) => (
           <motion.div
             key={i}
@@ -39,11 +40,13 @@ const AchievementsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="glass rounded-xl p-6 text-center hover:glow-accent transition-all duration-300"
+            className="card-template text-center group"
           >
-            <a.icon size={36} className="text-accent mx-auto mb-4" />
-            <h3 className="font-heading text-sm font-bold text-foreground mb-2">{a.title}</h3>
-            <p className="text-xs text-muted-foreground">{a.context}</p>
+            <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style={{ background: "hsl(16 80% 60% / 0.1)" }}>
+              <a.icon size={28} className="text-accent group-hover:scale-110 transition-transform" />
+            </div>
+            <h3 className="font-heading text-sm font-bold text-foreground mb-3">{a.title}</h3>
+            <p className="text-xs text-muted-foreground leading-relaxed">{a.context}</p>
           </motion.div>
         ))}
       </div>

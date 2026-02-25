@@ -34,18 +34,18 @@ const Navbar = () => {
         scrolled ? "glass-strong shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+      <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <a href="#home" className="font-heading text-lg font-bold text-gradient-primary">
           Hometown Tha-Tha-Tha
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-7">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               {item.label}
             </a>
@@ -53,21 +53,11 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a
-            href={LINKEDIN_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border border-border text-foreground hover:border-primary hover:text-primary transition-all"
-          >
+          <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer" className="btn-secondary !py-2 !px-4 !text-sm">
             <Linkedin size={16} />
             LinkedIn
           </a>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold bg-primary text-primary-foreground hover:opacity-90 transition-all"
-          >
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary !py-2 !px-4 !text-sm">
             <MessageCircle size={16} />
             Chat WhatsApp
           </a>
@@ -96,27 +86,17 @@ const Navbar = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-sm font-medium text-muted-foreground hover:text-primary py-2"
+                className="text-sm font-medium text-muted-foreground hover:text-primary py-2 transition-colors"
               >
                 {item.label}
               </a>
             ))}
-            <div className="flex gap-3 pt-3 border-t border-border">
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-bold bg-primary text-primary-foreground"
-              >
+            <div className="flex gap-3 pt-4 border-t border-border">
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary flex-1 text-center !text-sm">
                 <MessageCircle size={16} />
                 WhatsApp
               </a>
-              <a
-                href={LINKEDIN_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-medium border border-border text-foreground"
-              >
+              <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer" className="btn-secondary !px-4">
                 <Linkedin size={16} />
               </a>
             </div>

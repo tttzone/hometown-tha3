@@ -22,29 +22,40 @@ const HeroSection = () => {
         <img
           src={bgImg}
           alt="Gunung Ciremai"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105"
           loading="eager"
         />
         <div className="absolute inset-0 hero-overlay" />
       </div>
 
-      <div className="container relative z-10 mx-auto py-32 px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container relative z-10 mx-auto py-36 md:py-44 px-4">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left copy */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gradient-primary">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-sm font-medium tracking-widest uppercase mb-4"
+              style={{ color: "hsl(174 72% 50%)" }}
+            >
+              Technologist & Product Leader
+            </motion.p>
+
+            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient-primary leading-[1.1]">
               Hometown Tha-Tha-Tha
             </h1>
-            <p className="text-base md:text-lg text-secondary-foreground mb-6 max-w-xl leading-relaxed">
+
+            <p className="text-base md:text-lg mb-8 max-w-xl leading-relaxed" style={{ color: "hsl(200 20% 80%)" }}>
               Saya <span className="text-foreground font-semibold">Totok Suryanto</span> (Surya Ban-jang) — technologist & product leader yang nggabungin engineering, agile delivery, dan UI/UX mindset biar produk terasa enak dipakai dan gampang diskalakan.
             </p>
 
             {/* Quote */}
-            <div className="glass rounded-xl p-5 mb-6 border-l-4 border-primary max-w-xl">
+            <div className="card-template border-l-4 !border-l-primary p-5 mb-8 max-w-xl">
               <p className="font-heading text-xl md:text-2xl font-bold text-foreground italic">
                 "Tidak Ada Hal Baru di Bawah Matahari."
               </p>
@@ -54,29 +65,16 @@ const HeroSection = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mb-6">
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold bg-primary text-primary-foreground hover:opacity-90 transition-all text-sm"
-              >
+            <div className="flex flex-wrap gap-3 mb-8">
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <MessageCircle size={18} />
                 Chat WhatsApp
               </a>
-              <a
-                href="#portfolio"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold border border-border text-foreground hover:border-primary hover:text-primary transition-all text-sm"
-              >
+              <a href="#portfolio" className="btn-secondary">
                 <ArrowDown size={18} />
                 Lihat Portfolio
               </a>
-              <a
-                href={LINKEDIN_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold border border-border text-foreground hover:border-primary hover:text-primary transition-all text-sm"
-              >
+              <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                 <Linkedin size={18} />
                 LinkedIn
               </a>
@@ -85,10 +83,7 @@ const HeroSection = () => {
             {/* Chips */}
             <div className="flex flex-wrap gap-2">
               {chips.map((chip) => (
-                <span
-                  key={chip}
-                  className="px-3 py-1 rounded-full text-xs font-medium bg-secondary text-secondary-foreground border border-border"
-                >
+                <span key={chip} className="chip">
                   {chip}
                 </span>
               ))}
@@ -97,17 +92,21 @@ const HeroSection = () => {
 
           {/* Right portrait */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="hidden lg:flex justify-center"
           >
             <div className="relative">
-              <div className="absolute -inset-4 rounded-2xl bg-primary/10 blur-2xl animate-pulse-glow" />
+              <div className="absolute -inset-6 rounded-3xl blur-3xl" style={{ background: "hsl(174 72% 50% / 0.08)" }} />
               <img
                 src={portraitImg}
                 alt="Totok Suryanto - Surya Ban-jang"
-                className="relative w-80 h-80 object-cover rounded-2xl glass border-2 border-primary/20 shadow-2xl"
+                className="relative w-80 h-80 object-cover rounded-3xl border-2 shadow-2xl"
+                style={{
+                  borderColor: "hsl(174 72% 50% / 0.2)",
+                  boxShadow: "0 20px 60px hsl(220 20% 4% / 0.6)",
+                }}
               />
             </div>
           </motion.div>
