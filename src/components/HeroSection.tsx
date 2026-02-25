@@ -57,10 +57,10 @@ const HeroSection = () => {
             {/* Quote */}
             <div className="card-template border-l-4 !border-l-primary p-5 mb-8 max-w-xl">
               <p className="font-heading text-xl md:text-2xl font-bold text-foreground italic">
-                "Tidak Ada Hal Baru di Bawah Matahari."
+                "Sebaik-baik manusia adalah yang bermanfaat bagi orang lain."
               </p>
               <p className="text-sm text-muted-foreground mt-2">
-                Yang bikin beda itu cara kita merapikan, mempercepat, dan memanusiakan pengalaman pengguna.
+                — Hadits Riwayat Ath-Thabrani dan Ahmad
               </p>
             </div>
 

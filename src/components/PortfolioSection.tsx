@@ -41,7 +41,8 @@ const items: PortfolioItem[] = [
     name: "Wadah Rempah",
     desc: "Produk rempah dengan positioning premium dan ritual harian.",
     tags: ["Consumer Brand"],
-    cta: "detail",
+    cta: "visit",
+    url: "https://wadah-rempah.lovable.app",
     modal: {
       bullets: [
         "Produk rempah premium untuk ritual kesehatan harian.",
