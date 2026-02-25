@@ -43,7 +43,7 @@ const HeroSection = () => {
               className="text-sm font-medium tracking-widest uppercase mb-4"
               style={{ color: "hsl(174 72% 50%)" }}
             >
-              Technologist & Product Leader
+              Entrepreneur · AI Enthusiast · Product & Project Leader
             </motion.p>
 
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient-primary leading-[1.1]">
