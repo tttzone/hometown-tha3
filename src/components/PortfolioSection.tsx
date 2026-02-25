@@ -57,9 +57,16 @@ const items: PortfolioItem[] = [
     tags: ["AI Services"],
     cta: "contact",
   },
+  {
+    name: "Kalam Cirebon",
+    desc: "Media online lokal berbasis Cirebon yang menyajikan berita dan kejadian lokal melalui sudut pandang Islam Kaffah berlandaskan Al-Qur'an dan Hadis.",
+    tags: ["Media"],
+    cta: "visit",
+    url: "https://www.instagram.com/official_kalam_cirebon/",
+  },
 ];
 
-const filters = ["All", "Consulting & Tech", "Consumer Brand", "AI Services"];
+const filters = ["All", "Consulting & Tech", "Consumer Brand", "AI Services", "Media"];
 
 const PortfolioSection = () => {
   const [filter, setFilter] = useState("All");
