@@ -1,52 +1,59 @@
 import { motion } from "framer-motion";
-import { Award, Star, Trophy } from "lucide-react";
 
-const achievements = [
+const impacts = [
   {
-    icon: Trophy,
-    title: "Top Inovasi Pelayanan Publik Terpuji 2022",
-    context: "Penghargaan nasional untuk inovasi pelayanan publik yang berdampak luas.",
+    title: "PeduliLindungi National Platform",
+    description:
+      "Contributed to Indonesia's national digital response during the COVID-19 pandemic through the PeduliLindungi platform, enabling millions of citizens to access vaccination records, mobility verification, and public health services.",
+    tags: ["National Digital Platform", "Public Health Infrastructure", "Millions of Users"],
   },
   {
-    icon: Star,
-    title: "Best Government Collaboration for Pandemic Solution",
-    context: "Kolaborasi terbaik antara pemerintah dan teknologi dalam penanganan pandemi.",
-  },
-  {
-    icon: Award,
-    title: "Karya Terpilih Pertama",
-    context: "Karya terpilih pertama dalam kompetisi solusi digital nasional.",
+    title: "AI Situation Room – Ministry of State Secretariat",
+    description:
+      "Participated in the development of an AI-powered Situation Room platform for the Ministry of State Secretariat, designed to support real-time monitoring, strategic analytics, and decision intelligence.",
+    tags: ["Government AI Platform", "Strategic Intelligence", "Real-Time Monitoring"],
   },
 ];
 
 const AchievementsSection = () => (
-  <section id="achievements" className="py-28 relative section-divider">
+  <section id="achievements" className="py-32 relative section-divider">
     <div className="container mx-auto px-4">
-      <motion.h2
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="section-heading"
+        className="text-center mb-16"
       >
-        Achievements
-      </motion.h2>
-      <p className="section-subtitle">Penghargaan dan pencapaian yang membanggakan.</p>
+        <h2 className="section-heading">Impact I've Helped Create</h2>
+        <p className="section-subtitle">Contributing to systems that serve millions.</p>
+      </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        {achievements.map((a, i) => (
+      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {impacts.map((item, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="card-template text-center group"
+            transition={{ duration: 0.6, delay: i * 0.15 }}
+            className="card-template !p-9"
           >
-            <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style={{ background: "hsl(16 80% 60% / 0.1)" }}>
-              <a.icon size={28} className="text-accent group-hover:scale-110 transition-transform" />
+            <div className="w-10 h-10 rounded-full flex items-center justify-center mb-6" style={{ background: "hsl(32 80% 55% / 0.1)" }}>
+              <span className="text-primary font-heading text-lg font-bold">{i + 1}</span>
             </div>
-            <h3 className="font-heading text-sm font-bold text-foreground mb-3">{a.title}</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">{a.context}</p>
+            <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-4 leading-tight">
+              {item.title}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-[1.8] mb-6">
+              {item.description}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {item.tags.map((tag) => (
+                <span key={tag} className="chip !text-[11px]">
+                  {tag}
+                </span>
+              ))}
+            </div>
           </motion.div>
         ))}
       </div>
