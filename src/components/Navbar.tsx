@@ -33,7 +33,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <a href="#home" className="font-heading text-lg font-semibold text-foreground">
-          Hometown <span className="text-gradient-primary">Tha-Tha-Tha</span>
+          ASA <span className="text-gradient-primary">Personal Venture</span>
         </a>
 
         {/* Desktop */}
