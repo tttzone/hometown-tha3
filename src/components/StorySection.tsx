@@ -45,13 +45,13 @@ const StorySection = () => (
           className="space-y-6"
         >
           <p className="text-base md:text-lg text-secondary-foreground leading-[1.9]">
-            Saya tumbuh di kaki <span className="text-foreground font-medium">Gunung Ciremai</span> — di kota kecil tempat tetangga saling kenal dan gotong-royong bukan sekadar kata. Dari sana saya belajar bahwa dampak terbaik lahir dari kepedulian yang tulus.
+            Saya memulai karier di IT sejak 2012. Waktu membawa saya melewati banyak ruang: membangun sistem, mengawal delivery, hingga menguatkan peran sebagai <span className="text-foreground font-medium italic">Agile Coach</span>—dan sekitar 8 tahun terakhir saya bertumbuh di Telkom.
           </p>
           <p className="text-base md:text-lg text-secondary-foreground leading-[1.9]">
-            Rasa penasaran terhadap teknologi membawa saya jauh dari kampung halaman — membangun platform digital berskala nasional, merancang AI systems, dan memimpin delivery teams. Namun nilai-nilai dari rumah selalu menjadi kompas.
+            Namun hidup saya tidak hanya tentang teknologi dan AI. Saya juga jatuh cinta pada entrepreneurship—pada cara ide berubah menjadi nilai, dan nilai menjadi dampak yang bisa bertahan.
           </p>
           <p className="text-base md:text-lg text-secondary-foreground leading-[1.9]">
-            Saya membangun karena percaya teknologi seharusnya <span className="text-foreground font-medium">memanusiakan</span> — mendekatkan layanan publik, mempermudah keputusan, dan menjembatani tradisi dengan inovasi.
+            Sekarang saya menetap di kaki <span className="text-foreground font-medium">Gunung Ciremai</span>. Di antara udara yang tenang dan langit yang sering berubah warna, motivasi saya tetap sama: membangun sesuatu yang lebih besar dari diri saya sendiri—terutama ketika karya itu bisa memberi manfaat yang luas, dan menjadi bagian dari dakwah: mengajak pada kebaikan melalui tindakan.
           </p>
 
           {/* Quote */}
