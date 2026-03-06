@@ -60,7 +60,7 @@ const items: PortfolioItem[] = [
   },
   {
     name: "Kalam Cirebon",
-    desc: "Media online lokal Cirebon menyajikan berita melalui sudut pandang Islam Kaffah berlandaskan Al-Qur'an dan Hadis.",
+    desc: "Kalam Cirebon | Muslim — Bukan sekadar hijrah penampilan, tapi reset Pola Pikir & Pola Sikap.",
     tags: ["Media"],
     cta: "visit",
     url: "https://www.instagram.com/officialkalamcirebon/",
