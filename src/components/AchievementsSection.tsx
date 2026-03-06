@@ -5,6 +5,7 @@ import logoSetneg from "@/assets/logo-setneg.png";
 const impacts = [
   {
     title: "PeduliLindungi National Platform",
+    year: "2019 – 2022",
     description:
       "Contributed to Indonesia's national digital response during the COVID-19 pandemic through the PeduliLindungi platform, enabling millions of citizens to access vaccination records, mobility verification, and public health services.",
     tags: ["National Digital Platform", "Public Health Infrastructure", "Millions of Users"],
@@ -12,6 +13,7 @@ const impacts = [
   },
   {
     title: "AI Situation Room – Ministry of State Secretariat",
+    year: "2025 – 2026",
     description:
       "Participated in the development of an AI-powered Situation Room platform for the Ministry of State Secretariat, designed to support real-time monitoring, strategic analytics, and decision intelligence.",
     tags: ["Government AI Platform", "Strategic Intelligence", "Real-Time Monitoring"],

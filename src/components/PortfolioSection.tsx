@@ -6,6 +6,7 @@ import logoGandiwa from "@/assets/logo-gandiwa.png";
 import logoRempah from "@/assets/logo-rempah.png";
 import logoWadah from "@/assets/logo-wadah.png";
 import logoKalam from "@/assets/logo-kalam.png";
+import logoContentcraft from "@/assets/logo-contentcraft.png";
 
 const WA_LINK = "https://wa.me/6282111186898?text=Halo%20Surya%2C%20saya%20tertarik%20diskusi%20project.";
 
@@ -57,6 +58,7 @@ const items: PortfolioItem[] = [
     desc: "Jasa pembuatan UGC pakai AI — cepat, hemat, tetap terasa human.",
     tags: ["AI Services"],
     cta: "contact",
+    logo: logoContentcraft,
   },
   {
     name: "Kalam Cirebon",
