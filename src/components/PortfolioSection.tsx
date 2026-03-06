@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, MessageCircle, X } from "lucide-react";
+import logoMsc from "@/assets/logo-msc.png";
+import logoGandiwa from "@/assets/logo-gandiwa.png";
+import logoRempah from "@/assets/logo-rempah.png";
+import logoWadah from "@/assets/logo-wadah.png";
+import logoKalam from "@/assets/logo-kalam.png";
 
 const WA_LINK = "https://wa.me/6282111186898?text=Halo%20Surya%2C%20saya%20tertarik%20diskusi%20project.";
 
@@ -10,6 +15,7 @@ type PortfolioItem = {
   tags: string[];
   cta: "detail" | "visit" | "contact";
   url?: string;
+  logo?: string;
   modal?: { bullets: string[] };
 };
 
@@ -19,28 +25,32 @@ const items: PortfolioItem[] = [
     desc: "Membantu bisnis menata bahan, pemasok, dan proses produksi agar berkembang berkelanjutan sesuai prinsip syariat.",
     tags: ["Consulting & Tech"],
     cta: "visit",
-    url: "https://mustanir-sc.lovable.app",
+    url: "https://msc.asacentra.com/",
+    logo: logoMsc,
   },
   {
     name: "Gandiwa Partner",
     desc: "Stokis & distributor produk Madu Gandiwa Power.",
     tags: ["Consumer Brand"],
     cta: "visit",
-    url: "https://gandiwa-partner.lovable.app",
+    url: "https://partner-gandiwa.asacentra.com/",
+    logo: logoGandiwa,
   },
   {
     name: "Rempah Power",
     desc: "Ritual harian berbasis rempah & madu — tenang di malam hari, jernih di pagi hari.",
     tags: ["Consumer Brand"],
     cta: "visit",
-    url: "https://project-rempah-power.lovable.app",
+    url: "https://rempah-power.asacentra.com/",
+    logo: logoRempah,
   },
   {
     name: "Wadah Rempah",
     desc: "Produk rempah premium untuk ritual kesehatan harian.",
     tags: ["Consumer Brand"],
     cta: "visit",
-    url: "https://wadah-rempah.lovable.app",
+    url: "https://wadah-rempah.asacentra.com/",
+    logo: logoWadah,
   },
   {
     name: "ContentCraft AI",
@@ -53,7 +63,8 @@ const items: PortfolioItem[] = [
     desc: "Media online lokal Cirebon menyajikan berita melalui sudut pandang Islam Kaffah berlandaskan Al-Qur'an dan Hadis.",
     tags: ["Media"],
     cta: "visit",
-    url: "https://www.instagram.com/official_kalam_cirebon/",
+    url: "https://www.instagram.com/officialkalamcirebon/",
+    logo: logoKalam,
   },
 ];
 
@@ -106,13 +117,19 @@ const PortfolioSection = () => {
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className="card-template flex flex-col"
             >
-              <div className="w-10 h-10 rounded-full flex items-center justify-center mb-5"
-                style={{ background: "hsl(32 80% 55% / 0.08)" }}
-              >
-                <span className="font-heading text-base font-semibold text-primary">
-                  {item.name.charAt(0)}
-                </span>
-              </div>
+              {item.logo ? (
+                <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center mb-5 bg-background">
+                  <img src={item.logo} alt={item.name} className="w-full h-full object-contain" />
+                </div>
+              ) : (
+                <div className="w-10 h-10 rounded-full flex items-center justify-center mb-5"
+                  style={{ background: "hsl(32 80% 55% / 0.08)" }}
+                >
+                  <span className="font-heading text-base font-semibold text-primary">
+                    {item.name.charAt(0)}
+                  </span>
+                </div>
+              )}
               <h3 className="font-heading text-base font-semibold text-foreground mb-2">{item.name}</h3>
               <p className="text-sm text-muted-foreground mb-5 flex-1 leading-relaxed">{item.desc}</p>
               <div className="flex flex-wrap gap-1.5 mb-5">
