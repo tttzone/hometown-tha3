@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import logoPL from "@/assets/logo-pl.jpg";
+import logoSetneg from "@/assets/logo-setneg.png";
 
 const impacts = [
   {
@@ -6,12 +8,14 @@ const impacts = [
     description:
       "Contributed to Indonesia's national digital response during the COVID-19 pandemic through the PeduliLindungi platform, enabling millions of citizens to access vaccination records, mobility verification, and public health services.",
     tags: ["National Digital Platform", "Public Health Infrastructure", "Millions of Users"],
+    logo: logoPL,
   },
   {
     title: "AI Situation Room – Ministry of State Secretariat",
     description:
       "Participated in the development of an AI-powered Situation Room platform for the Ministry of State Secretariat, designed to support real-time monitoring, strategic analytics, and decision intelligence.",
     tags: ["Government AI Platform", "Strategic Intelligence", "Real-Time Monitoring"],
+    logo: logoSetneg,
   },
 ];
 
@@ -38,9 +42,9 @@ const AchievementsSection = () => (
             transition={{ duration: 0.6, delay: i * 0.15 }}
             className="card-template !p-9"
           >
-            <div className="w-10 h-10 rounded-full flex items-center justify-center mb-6" style={{ background: "hsl(32 80% 55% / 0.1)" }}>
-              <span className="text-primary font-heading text-lg font-bold">{i + 1}</span>
-            </div>
+              <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center mb-6 bg-background border border-border/40">
+                <img src={item.logo} alt={item.title} className="w-full h-full object-contain" />
+              </div>
             <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-4 leading-tight">
               {item.title}
             </h3>
