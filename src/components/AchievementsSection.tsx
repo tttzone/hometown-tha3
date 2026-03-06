@@ -47,9 +47,10 @@ const AchievementsSection = () => (
               <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center mb-6 bg-background border border-border/40">
                 <img src={item.logo} alt={item.title} className="w-full h-full object-contain" />
               </div>
-            <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-4 leading-tight">
+            <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-1 leading-tight">
               {item.title}
             </h3>
+            <p className="text-xs text-primary font-medium mb-4">{item.year}</p>
             <p className="text-sm text-muted-foreground leading-[1.8] mb-6">
               {item.description}
             </p>
