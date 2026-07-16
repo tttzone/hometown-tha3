@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, MessageCircle, X } from "lucide-react";
+import logoIlluvia from "@/assets/logo-illuvia.png";
+import logoCuanku from "@/assets/logo-cuanku.svg";
+import logoArsy from "@/assets/logo-arsy.png";
 import logoMsc from "@/assets/logo-msc.png";
 import logoGandiwa from "@/assets/logo-gandiwa.png";
 import logoRempah from "@/assets/logo-rempah.png";
@@ -21,6 +24,30 @@ type PortfolioItem = {
 };
 
 const items: PortfolioItem[] = [
+  {
+    name: "Illuvia.id",
+    desc: "Distributor solusi pencahayaan profesional — arsitektural, LED, hingga smart lighting untuk konsultan, developer, dan kontraktor.",
+    tags: ["Consulting & Tech"],
+    cta: "visit",
+    url: "https://illuvia.id",
+    logo: logoIlluvia,
+  },
+  {
+    name: "Cuanku",
+    desc: "Platform komersial & keuangan all-in-one untuk UMKM — katalog online, POS pintar, dan laporan keuangan otomatis tanpa komisi marketplace.",
+    tags: ["Consulting & Tech"],
+    cta: "visit",
+    url: "https://cuanku.asacentra.com",
+    logo: logoCuanku,
+  },
+  {
+    name: "Arsy Wedding Organizer",
+    desc: "Wedding organizer syar'i — merencanakan pernikahan islami penuh berkah, dari konsultasi hingga hari H, dengan menjaga adab pergaulan.",
+    tags: ["Consulting & Tech"],
+    cta: "visit",
+    url: "https://arsy.asacentra.com",
+    logo: logoArsy,
+  },
   {
     name: "MSC (Mustanir ShariaTech Consulting)",
     desc: "Membantu bisnis menata bahan, pemasok, dan proses produksi agar berkembang berkelanjutan sesuai prinsip syariat.",
